@@ -6,8 +6,7 @@ class ViewController: NSViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		sceneView.scene = DraggableRectScene(in: sceneView!)
-		//sceneView.scene = CircleScene(in: sceneView!)
+		sceneView.scene = defaultScene(in: sceneView)
 	}
 	
 	override func viewDidLayout() {
