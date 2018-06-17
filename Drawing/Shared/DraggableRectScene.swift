@@ -5,7 +5,7 @@ class DraggableRectScene: Scene {
 	unowned var container: SceneContainer
 	var size: CGSize!
 	
-	var rectPosition = CGPoint(x: 128, y: 64)
+	var rect = CGRect(x: 128, y: 64, width: 128, height: 256)
 	
 	var activeTouches = 0
 	var isDragging: Bool {
@@ -17,8 +17,6 @@ class DraggableRectScene: Scene {
 	}
 	
 	func render(in context: CGContext, dirtyRect: CGRect) {
-		let rect = CGRect(origin: rectPosition, size: CGSize(width: 128, height: 256))
-		
 		// shadow
 		context.setFillColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.25))
 		let shadowOffset: CGFloat = isDragging ? 4 : 8
@@ -35,16 +33,20 @@ class DraggableRectScene: Scene {
 	}
 	
 	func handle(_ touch: Touch) {
+		// only handle touches that actually touch the rectangle
+		guard rect.contains(touch.startPosition) else { return }
+		
 		activeTouches += 1
 		container.setNeedsDisplay()
 		
-		let startPosition = rectPosition
+		let startPosition = rect.origin
+		
 		touch.register { (touch, event) in
 			switch event {
 			case .moved:
-				self.rectPosition = startPosition + touch.translation
+				self.rect.origin = startPosition + touch.translation
 			case .cancelled:
-				self.rectPosition = startPosition
+				self.rect.origin = startPosition
 				fallthrough
 			case .ended:
 				self.activeTouches -= 1
