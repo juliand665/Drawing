@@ -3,6 +3,7 @@ import CoreGraphics
 func defaultScene(in container: SceneContainer) -> Scene {
 	// adjust this to change which scene you're rendering without having to edit the platform-specific code
 	return CircleScene(in: container)
+	//return DraggableRectScene(in: container)
 }
 
 protocol Scene: AnyObject {
