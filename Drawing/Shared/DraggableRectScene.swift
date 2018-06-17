@@ -1,8 +1,8 @@
 import CoreGraphics
 
 /// renders a rectangle that can be dragged around
-class DraggableRectRenderer: Renderer {
-	unowned var container: RendererContainer
+class DraggableRectScene: Scene {
+	unowned var container: SceneContainer
 	var size: CGSize!
 	
 	var rectPosition = CGPoint(x: 128, y: 64)
@@ -12,7 +12,7 @@ class DraggableRectRenderer: Renderer {
 		return activeTouches > 0
 	}
 	
-	init(in container: RendererContainer) {
+	init(in container: SceneContainer) {
 		self.container = container
 	}
 	

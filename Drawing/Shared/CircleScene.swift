@@ -1,11 +1,11 @@
 import CoreGraphics
 
 /// renders a whole bunch of circles
-class CircleRenderer: Renderer {
-	unowned var container: RendererContainer
+class CircleScene: Scene {
+	unowned var container: SceneContainer
 	var size: CGSize!
 	
-	init(in container: RendererContainer) {
+	init(in container: SceneContainer) {
 		self.container = container
 	}
 	

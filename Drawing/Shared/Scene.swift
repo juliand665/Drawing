@@ -1,11 +1,11 @@
 import CoreGraphics
 
-protocol Renderer: AnyObject {
+protocol Scene: AnyObject {
 	/// the size of the drawing area
 	var size: CGSize! { get set }
 	
 	/// this should be unowned to avoid reference cycles
-	var container: RendererContainer { get set }
+	var container: SceneContainer { get set }
 	
 	/// renders the contents in a graphics context, optionally using `dirtyRect` to optimize performance
 	func render(in context: CGContext, dirtyRect: CGRect)
@@ -14,11 +14,11 @@ protocol Renderer: AnyObject {
 	func handle(_ touch: Touch)
 }
 
-protocol RendererContainer: AnyObject {
+protocol SceneContainer: AnyObject {
 	func setNeedsDisplay()
 }
 
 // default implementations
-extension Renderer {
+extension Scene {
 	func handle(_ touch: Touch) {}
 }

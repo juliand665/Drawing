@@ -1,19 +1,19 @@
 import Cocoa
 
 class ViewController: NSViewController {
-	@IBOutlet weak var renderView: RenderView!
+	@IBOutlet weak var sceneView: SceneView!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		renderView.renderer = DraggableRectRenderer(in: renderView!)
-		//renderView.renderer = CircleRenderer(in: renderView!)
+		sceneView.scene = DraggableRectScene(in: sceneView!)
+		//sceneView.scene = CircleScene(in: sceneView!)
 	}
 	
 	override func viewDidLayout() {
 		super.viewDidLayout()
 		
-		renderView.sizeChanged()
+		sceneView.sizeChanged()
 	}
 	
 	// MARK: Mouse Handling
@@ -22,7 +22,7 @@ class ViewController: NSViewController {
 	
 	override func mouseDown(with event: NSEvent) {
 		touch = Touch(at: position(of: event))
-		renderView.renderer.handle(touch!)
+		sceneView.scene.handle(touch!)
 	}
 	
 	override func mouseDragged(with event: NSEvent) {
@@ -35,13 +35,13 @@ class ViewController: NSViewController {
 	}
 	
 	private func position(of event: NSEvent) -> CGPoint {
-		let position = renderView.convert(event.locationInWindow, from: nil)
-		return CGPoint(x: position.x, y: renderView.bounds.height - position.y)
+		let position = sceneView.convert(event.locationInWindow, from: nil)
+		return CGPoint(x: position.x, y: sceneView.bounds.height - position.y)
 	}
 }
 
-class RenderView: NSView, RendererContainer {
-	var renderer: Renderer!
+class SceneView: NSView, SceneContainer {
+	var scene: Scene!
 	
 	override func draw(_ dirtyRect: NSRect) {
 		super.draw(dirtyRect)
@@ -51,11 +51,11 @@ class RenderView: NSView, RendererContainer {
 		context.translateBy(x: 0, y: bounds.height)
 		context.scaleBy(x: 1, y: -1)
 		
-		renderer.render(in: context, dirtyRect: dirtyRect)
+		scene.render(in: context, dirtyRect: dirtyRect)
 	}
 	
 	func sizeChanged() {
-		renderer.size = bounds.size
+		scene.size = bounds.size
 	}
 	
 	func setNeedsDisplay() {

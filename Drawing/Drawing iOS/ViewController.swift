@@ -1,19 +1,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-	@IBOutlet weak var renderView: RenderView!
+	@IBOutlet weak var sceneView: SceneView!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		renderView.renderer = DraggableRectRenderer(in: renderView!)
-		//renderView.renderer = CircleRenderer(in: renderView!)
+		sceneView.scene = DraggableRectScene(in: sceneView!)
+		//sceneView.scene = CircleScene(in: sceneView!)
 	}
 	
 	override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
 		
-		renderView.sizeChanged()
+		sceneView.sizeChanged()
 	}
 	
 	override var prefersStatusBarHidden: Bool {
@@ -31,21 +31,21 @@ class ViewController: UIViewController {
 	
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 		for rawTouch in touches {
-			let touch = Touch(at: rawTouch.location(in: renderView))
+			let touch = Touch(at: rawTouch.location(in: sceneView))
 			activeTouches[ObjectIdentifier(rawTouch)] = touch
-			renderView.renderer.handle(touch)
+			sceneView.scene.handle(touch)
 		}
 	}
 	
 	override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
 		for (rawTouch, touch) in activeTouches(representing: touches) {
-			touch.touchMoved(to: rawTouch.location(in: renderView))
+			touch.touchMoved(to: rawTouch.location(in: sceneView))
 		}
 	}
 	
 	override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
 		for (rawTouch, touch) in activeTouches(representing: touches) {
-			touch.touchMoved(to: rawTouch.location(in: renderView))
+			touch.touchMoved(to: rawTouch.location(in: sceneView))
 			touch.touchEnded()
 			activeTouches.removeValue(forKey: ObjectIdentifier(rawTouch))
 		}
@@ -53,25 +53,25 @@ class ViewController: UIViewController {
 	
 	override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
 		for (rawTouch, touch) in activeTouches(representing: touches) {
-			touch.touchMoved(to: rawTouch.location(in: renderView))
+			touch.touchMoved(to: rawTouch.location(in: sceneView))
 			touch.touchCancelled()
 			activeTouches.removeValue(forKey: ObjectIdentifier(rawTouch))
 		}
 	}
 }
 
-class RenderView: UIView, RendererContainer {
-	var renderer: Renderer!
+class SceneView: UIView, SceneContainer {
+	var scene: Scene!
 	
 	override func draw(_ dirtyRect: CGRect) {
 		super.draw(dirtyRect)
 		
 		let context = UIGraphicsGetCurrentContext()!
 		
-		renderer.render(in: context, dirtyRect: dirtyRect)
+		scene.render(in: context, dirtyRect: dirtyRect)
 	}
 	
 	func sizeChanged() {
-		renderer.size = bounds.size
+		scene.size = bounds.size
 	}
 }

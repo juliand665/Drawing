@@ -18,14 +18,14 @@
 		9551F47320D57A9300E59ADB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9551F47120D57A9300E59ADB /* LaunchScreen.storyboard */; };
 		9551F47A20D57AF000E59ADB /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551F47920D57AF000E59ADB /* Geometry.swift */; };
 		9551F47B20D57AF000E59ADB /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551F47920D57AF000E59ADB /* Geometry.swift */; };
-		9551F47D20D57B5B00E59ADB /* DraggableRectRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551F47C20D57B5B00E59ADB /* DraggableRectRenderer.swift */; };
-		9551F47E20D57B5B00E59ADB /* DraggableRectRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551F47C20D57B5B00E59ADB /* DraggableRectRenderer.swift */; };
-		9551F48320D5A44800E59ADB /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551F48220D5A44800E59ADB /* Renderer.swift */; };
-		9551F48420D5A44800E59ADB /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551F48220D5A44800E59ADB /* Renderer.swift */; };
+		9551F47D20D57B5B00E59ADB /* DraggableRectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551F47C20D57B5B00E59ADB /* DraggableRectScene.swift */; };
+		9551F47E20D57B5B00E59ADB /* DraggableRectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551F47C20D57B5B00E59ADB /* DraggableRectScene.swift */; };
+		9551F48320D5A44800E59ADB /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551F48220D5A44800E59ADB /* Scene.swift */; };
+		9551F48420D5A44800E59ADB /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551F48220D5A44800E59ADB /* Scene.swift */; };
 		9551F48620D5AAF000E59ADB /* Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551F48520D5AAF000E59ADB /* Touch.swift */; };
 		9551F48720D5AAF000E59ADB /* Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551F48520D5AAF000E59ADB /* Touch.swift */; };
-		9551F48920D5AB3C00E59ADB /* CircleRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551F48820D5AB3C00E59ADB /* CircleRenderer.swift */; };
-		9551F48A20D5AB3C00E59ADB /* CircleRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551F48820D5AB3C00E59ADB /* CircleRenderer.swift */; };
+		9551F48920D5AB3C00E59ADB /* CircleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551F48820D5AB3C00E59ADB /* CircleScene.swift */; };
+		9551F48A20D5AB3C00E59ADB /* CircleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551F48820D5AB3C00E59ADB /* CircleScene.swift */; };
 		9551F48C20D5AC0500E59ADB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551F48B20D5AC0500E59ADB /* Color.swift */; };
 		9551F48D20D5AC0500E59ADB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551F48B20D5AC0500E59ADB /* Color.swift */; };
 		9551F49020D5AD7100E59ADB /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551F48E20D5AD7100E59ADB /* UIColor.swift */; };
@@ -48,10 +48,10 @@
 		9551F47220D57A9300E59ADB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9551F47420D57A9300E59ADB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9551F47920D57AF000E59ADB /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
-		9551F47C20D57B5B00E59ADB /* DraggableRectRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableRectRenderer.swift; sourceTree = "<group>"; };
-		9551F48220D5A44800E59ADB /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		9551F47C20D57B5B00E59ADB /* DraggableRectScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableRectScene.swift; sourceTree = "<group>"; };
+		9551F48220D5A44800E59ADB /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		9551F48520D5AAF000E59ADB /* Touch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Touch.swift; sourceTree = "<group>"; };
-		9551F48820D5AB3C00E59ADB /* CircleRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleRenderer.swift; sourceTree = "<group>"; };
+		9551F48820D5AB3C00E59ADB /* CircleScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleScene.swift; sourceTree = "<group>"; };
 		9551F48B20D5AC0500E59ADB /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		9551F48E20D5AD7100E59ADB /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		9551F49120D5B18300E59ADB /* NSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
@@ -126,11 +126,11 @@
 			isa = PBXGroup;
 			children = (
 				9551F47920D57AF000E59ADB /* Geometry.swift */,
-				9551F48220D5A44800E59ADB /* Renderer.swift */,
+				9551F48220D5A44800E59ADB /* Scene.swift */,
 				9551F48520D5AAF000E59ADB /* Touch.swift */,
 				9551F48B20D5AC0500E59ADB /* Color.swift */,
-				9551F47C20D57B5B00E59ADB /* DraggableRectRenderer.swift */,
-				9551F48820D5AB3C00E59ADB /* CircleRenderer.swift */,
+				9551F47C20D57B5B00E59ADB /* DraggableRectScene.swift */,
+				9551F48820D5AB3C00E59ADB /* CircleScene.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -235,14 +235,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9551F47D20D57B5B00E59ADB /* DraggableRectRenderer.swift in Sources */,
+				9551F47D20D57B5B00E59ADB /* DraggableRectScene.swift in Sources */,
 				9551F45720D57A8500E59ADB /* ViewController.swift in Sources */,
 				9551F47A20D57AF000E59ADB /* Geometry.swift in Sources */,
-				9551F48920D5AB3C00E59ADB /* CircleRenderer.swift in Sources */,
+				9551F48920D5AB3C00E59ADB /* CircleScene.swift in Sources */,
 				9551F49220D5B18300E59ADB /* NSColor.swift in Sources */,
 				9551F48620D5AAF000E59ADB /* Touch.swift in Sources */,
 				9551F48C20D5AC0500E59ADB /* Color.swift in Sources */,
-				9551F48320D5A44800E59ADB /* Renderer.swift in Sources */,
+				9551F48320D5A44800E59ADB /* Scene.swift in Sources */,
 				9551F45520D57A8500E59ADB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,13 +251,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9551F47E20D57B5B00E59ADB /* DraggableRectRenderer.swift in Sources */,
+				9551F47E20D57B5B00E59ADB /* DraggableRectScene.swift in Sources */,
 				9551F46B20D57A9100E59ADB /* ViewController.swift in Sources */,
 				9551F47B20D57AF000E59ADB /* Geometry.swift in Sources */,
-				9551F48A20D5AB3C00E59ADB /* CircleRenderer.swift in Sources */,
+				9551F48A20D5AB3C00E59ADB /* CircleScene.swift in Sources */,
 				9551F48720D5AAF000E59ADB /* Touch.swift in Sources */,
 				9551F48D20D5AC0500E59ADB /* Color.swift in Sources */,
-				9551F48420D5A44800E59ADB /* Renderer.swift in Sources */,
+				9551F48420D5A44800E59ADB /* Scene.swift in Sources */,
 				9551F46920D57A9100E59ADB /* AppDelegate.swift in Sources */,
 				9551F49020D5AD7100E59ADB /* UIColor.swift in Sources */,
 			);
