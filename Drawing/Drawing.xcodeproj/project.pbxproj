@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		953D90FD20D8772700E467B3 /* ResizableRectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953D90FC20D8772700E467B3 /* ResizableRectScene.swift */; };
+		953D90FE20D8772700E467B3 /* ResizableRectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953D90FC20D8772700E467B3 /* ResizableRectScene.swift */; };
 		9551F45520D57A8500E59ADB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551F45420D57A8500E59ADB /* AppDelegate.swift */; };
 		9551F45720D57A8500E59ADB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551F45620D57A8500E59ADB /* ViewController.swift */; };
 		9551F45920D57A8600E59ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9551F45820D57A8600E59ADB /* Assets.xcassets */; };
@@ -33,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		953D90FC20D8772700E467B3 /* ResizableRectScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableRectScene.swift; sourceTree = "<group>"; };
 		9551F45120D57A8500E59ADB /* Drawing macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drawing macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9551F45420D57A8500E59ADB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9551F45620D57A8500E59ADB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +133,7 @@
 				9551F48520D5AAF000E59ADB /* Touch.swift */,
 				9551F48B20D5AC0500E59ADB /* Color.swift */,
 				9551F47C20D57B5B00E59ADB /* DraggableRectScene.swift */,
+				953D90FC20D8772700E467B3 /* ResizableRectScene.swift */,
 				9551F48820D5AB3C00E59ADB /* CircleScene.swift */,
 			);
 			path = Shared;
@@ -241,6 +245,7 @@
 				9551F48920D5AB3C00E59ADB /* CircleScene.swift in Sources */,
 				9551F49220D5B18300E59ADB /* NSColor.swift in Sources */,
 				9551F48620D5AAF000E59ADB /* Touch.swift in Sources */,
+				953D90FD20D8772700E467B3 /* ResizableRectScene.swift in Sources */,
 				9551F48C20D5AC0500E59ADB /* Color.swift in Sources */,
 				9551F48320D5A44800E59ADB /* Scene.swift in Sources */,
 				9551F45520D57A8500E59ADB /* AppDelegate.swift in Sources */,
@@ -257,6 +262,7 @@
 				9551F48A20D5AB3C00E59ADB /* CircleScene.swift in Sources */,
 				9551F48720D5AAF000E59ADB /* Touch.swift in Sources */,
 				9551F48D20D5AC0500E59ADB /* Color.swift in Sources */,
+				953D90FE20D8772700E467B3 /* ResizableRectScene.swift in Sources */,
 				9551F48420D5A44800E59ADB /* Scene.swift in Sources */,
 				9551F46920D57A9100E59ADB /* AppDelegate.swift in Sources */,
 				9551F49020D5AD7100E59ADB /* UIColor.swift in Sources */,
